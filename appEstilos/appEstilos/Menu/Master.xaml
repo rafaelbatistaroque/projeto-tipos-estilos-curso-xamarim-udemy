@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:pagina="clr-namespace:appEstilos"
+             x:Class="appEstilos.Menu.Master">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Button Text="EstiloImplicito" Clicked="IrPaginaImplicitStylePage" VerticalOptions="Start"/>
+                <Button Text="EstiloExplicito" Clicked="IrPaginaExplicitStylePage" VerticalOptions="Start"/>
+                <Button Text="EstiloGlobal" Clicked="IrPaginaGlobalStylePage" VerticalOptions="Start"/>
+                <Button Text="EstiloHerança" Clicked="IrPaginaInheritStylePage" VerticalOptions="Start"/>
+                <Button Text="EstiloDinâmico" Clicked="IrPaginaDynamicStylePage" VerticalOptions="Start"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pagina:MainPage/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

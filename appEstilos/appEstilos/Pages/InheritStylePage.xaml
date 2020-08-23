@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="appEstilos.Pages.InheritStylePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="xEstiloView"  TargetType="View">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="BackgroundColor" Value="Tomato" />
+            </Style>
+            <Style x:Key="xEstiloLabel"  TargetType="Label" BasedOn="{StaticResource xEstiloView}">
+                <Setter Property="TextColor" Value="Yellow" />
+            </Style>
+            <Style x:Key="xEstiloBtn" TargetType="Button" BasedOn="{StaticResource xEstiloView}">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms" Style="{StaticResource xEstiloLabel}"/>
+            <Button Text="OK" Style="{StaticResource xEstiloBtn}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,1 @@
+C:\DEV\curso-xamarin-2020\projeto7_udemy\appEstilos\appEstilos.UWP\appEstilos.UWP.csproj;x86
